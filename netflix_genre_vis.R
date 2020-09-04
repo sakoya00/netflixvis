@@ -7,7 +7,7 @@
 netflix <- read.csv("netflix_titles.csv", header=T, na.strings=c("","NA"))
 netflix2 <- cbind(netflix$country, netflix$listed_in, factor.exclude= NA)
 netflix2 <-na.omit(netflix2)
-netflix3 <-as.tibble(netflix2)
+netflix3 <-as_tibble(netflix2)
 write.csv(netflix3, "netflix3.csv")
 
 #I did some cleaning in Excel then moved back to the below code
