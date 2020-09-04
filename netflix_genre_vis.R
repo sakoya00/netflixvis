@@ -10,7 +10,7 @@ netflix2 <-na.omit(netflix2)
 netflix3 <-as.tibble(netflix2)
 write.csv(netflix3, "netflix3.csv")
 
-#some cleaning in Excel then below
+#I did some cleaning in Excel then moved back to the below code
 netflix4 <- read.csv("netflix3.csv", header=T)
 netflix5 <- separate_rows(netflix4, Country, sep=", ")
 netflix6 <- separate_rows(netflix5, Genre, sep=", ")
