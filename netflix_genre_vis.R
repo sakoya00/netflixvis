@@ -16,7 +16,8 @@ netflix5 <- separate_rows(netflix4, Country, sep=", ")
 netflix6 <- separate_rows(netflix5, Genre, sep=", ")
 write.csv(netflix6, "netflix6.csv")
 
-#top 10 countries which use Netflix the most
+#Top 10 countries which use Netflix the most, according to
+#https://www.businessinsider.com/netflix-countries-most-popular-user-penetration-2018-7#1-united-states-645-user-penetration-10
 countrysub <- c("United Kingdom", "Germany", "Finland", "Australia", "Netherlands", "Sweden", "Denmark", "Canada", "Norway", "United States")
 n7 <- filter(netflix6, is.element(Country, countrysub))
 
